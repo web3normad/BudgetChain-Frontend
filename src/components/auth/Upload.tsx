@@ -19,7 +19,7 @@ interface FormErrors {
   terms?: string;
 }
 
-const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) => {
+const Upload: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) => {
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [password, setPassword] = useState<string>('');
@@ -127,17 +127,17 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
       
       <main className="flex-grow flex my-10 items-center justify-center p-4">
         <div className="w-full space-y-8 max-w-[1010px]">
-          {/* Header with similar positioning as login page */}
+          
           <div className="mb-4 text-center lg:text-left">
             <h1 className="text-[#4F4AE6] text-2xl font-bold mb-1">Create An Account</h1>
             <p className="text-white text-sm">To Activate Our Service</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Left side - Steps */}
+          
             <div className="hidden md:block">
               <div className="relative">
-                {/* Vertical line connecting all circles */}
+                
                 <div className="absolute left-6 top-0 bottom-0 w-px border-l border-dashed border-gray-600 h-full"></div>
                 
                 <div className="space-y-24">
@@ -160,7 +160,7 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
               </div>
             </div>
             
-            {/* Right side - Form */}
+            {/* Form */}
             <div className="md:col-span-2">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
@@ -168,7 +168,7 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
                     Upload VIR Document
                   </label>
                   <div 
-                    className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer ${
+                    className={`border-2  rounded-xl p-20 text-center cursor-pointer ${
                       isDragging ? 'border-[#4F4AE6] bg-[#151523]' : 'border-gray-700 bg-[#151523]'
                     } ${errors.file ? 'border-red-500' : ''}`}
                     onDragOver={handleDragOver}
@@ -294,4 +294,4 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
   );
 };
 
-export default AccountCreation;
+export default Upload;
