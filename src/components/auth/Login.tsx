@@ -1,4 +1,3 @@
-// components/Login.tsx
 import React, { useState, FormEvent } from 'react';
 import Link from 'next/link';
 
@@ -28,7 +27,7 @@ const Login: React.FC<LoginProps> = ({ onLogin, onBack }) => {
       return;
     }
     
-    // Here you would handle the actual login logic
+   
     setError('');
     onLogin({ walletAddress, password });
   };

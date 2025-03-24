@@ -13,7 +13,7 @@ import Footer from '@/components/footer';
 export default function Home() {
   const router = useRouter();
 
-  const handleGetStarted = () => {
+  const handleRole = () => {
     router.push('/role-selection');
   };
 
@@ -34,12 +34,12 @@ export default function Home() {
           resources with real-time insights and AI-driven automation.
         </p>
         <div className="flex space-x-4">
-          <button className="w-[170px] h-[50px] rounded-[12px]  border border-[#EBEBEB80] px-4 py-2 transition hover:bg-white hover:text-black">
+          <button className="w-[170px] h-[50px] rounded-[12px]  border border-[#EBEBEB80] px-4 py-2 transition hover:bg-white hover:text-black"  onClick={handleRole}>
             LOGIN
           </button>
           <button 
             className="w-[170px] h-[50px] rounded-[12px] bg-white px-4 py-2 text-black transition hover:bg-opacity-80"
-            onClick={handleGetStarted}
+           
           >
             GET STARTED
           </button>
