@@ -26,6 +26,7 @@ const RoleSelection: React.FC<RoleSelectionProps> = ({ onRoleSelect, onNext }) =
 
   return (
     <div className="min-h-screen bg-[#050512] text-white flex flex-col">
+      {/* Navbar */}
       <Navbar />
       
       <main className="flex-grow flex my-10 items-center justify-center p-4">

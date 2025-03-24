@@ -1,4 +1,3 @@
-// app/create-account/page.tsx
 'use client';
 
 import Upload from '@/components/auth/Upload';
