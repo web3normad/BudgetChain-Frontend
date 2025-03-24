@@ -20,7 +20,7 @@ interface FormErrors {
 }
 
 const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) => {
-  const [document, setDocument] = useState<File | null>(null);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
@@ -79,7 +79,7 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
       newErrors.file = 'File size must be less than 20MB';
     } else {
       delete newErrors.file;
-      setDocument(file);
+      setUploadedFile(file);
     }
     
     setErrors(newErrors);
@@ -88,7 +88,7 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
     
-    if (!document) {
+    if (!uploadedFile) {
       newErrors.file = 'Please upload a document';
     }
     
@@ -115,7 +115,7 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
     
     if (validateForm()) {
       onSubmit({
-        document,
+        document: uploadedFile,
         password
       });
     }
@@ -184,15 +184,15 @@ const AccountCreation: React.FC<AccountCreationProps> = ({ onBack, onSubmit }) =
                       accept=".pdf,.doc,.docx,.jpeg,.jpg,.png"
                     />
                     
-                    {document ? (
+                    {uploadedFile ? (
                       <div className="text-white">
-                        <p>File uploaded: {document.name}</p>
+                        <p>File uploaded: {uploadedFile.name}</p>
                         <button 
                           type="button" 
                           className="text-[#4F4AE6] text-sm mt-2 hover:underline"
                           onClick={(e) => {
                             e.stopPropagation();
-                            setDocument(null);
+                            setUploadedFile(null);
                           }}
                         >
                           Remove file
