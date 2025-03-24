@@ -30,7 +30,6 @@ const RoleSelection: React.FC<RoleSelectionProps> = ({ onRoleSelect, onNext }) =
       
       <main className="flex-grow flex my-10 items-center justify-center p-4">
         <div className="w-full space-y-8 max-w-[1010px]">
-          {/* Header with similar positioning as login page */}
           <div className="mb-4 text-center lg:text-left">
             <h1 className="text-[#4F4AE6] text-2xl font-bold mb-1">Login To Your Account</h1>
             <p className="text-white text-sm">To View Activity</p>
