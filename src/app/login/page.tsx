@@ -43,7 +43,7 @@ const LoginPage: React.FC = () => {
     <div className="min-h-screen bg-[#050512] text-white flex flex-col">
       <Navbar />
       
-      <main className="flex-grow flex my-10 items-center justify-center p-4">
+      <main className="flex-grow flex my-10 items-center justify-center p-4 mt-[-280px]">
         <div className="w-full space-y-8 max-w-[1010px]">
           <div className="mb-4 text-center lg:text-left">
             <h1 className="text-[#4F4AE6] text-2xl font-bold mb-1">Login To Your Account</h1>
