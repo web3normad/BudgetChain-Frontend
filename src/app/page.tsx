@@ -34,7 +34,7 @@ export default function Home() {
         <div className="flex space-x-4">
 
           <button className="w-[170px] h-[50px] rounded-[12px]  border border-[#EBEBEB80] px-4 py-2 transition hover:bg-white hover:text-black"  onClick={handleRole}>
-
+          </button>
           <button className="w-[170px] h-[50px] rounded-[12px] bg-[#050512] border border-[#EBEBEB80] px-4 py-2 text-[#EBEBEB] transition hover:bg-white hover:text-black">
 
             LOGIN
